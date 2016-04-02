@@ -192,18 +192,7 @@
                 $("#joinRobin").click();
             }, 1000);
         }
-    }
-
-    if (GM_getValue("chatName") != name) {
-        GM_setValue("chatName", name);
-        setTimeout(function() {
-            var oldVal = $(".text-counter-input").val();
-
-            $(".text-counter-input").val("[Robin-Grow] I automatically voted to grow, and so can you! http://redd.it/4cwk2s !").submit();
-            $(".text-counter-input").val(oldVal);
-
-        }, 10000);
-    }
+    }    
 
     // hash string so finding spam doesn't take up too much memory
     function hashString(str) {
@@ -385,7 +374,7 @@
         $(".robin-chat--sidebar").show();
         $("#settingContainer").hide();
     }
-    
+
     function saveSetting(settings) {
         localStorage["robin-grow-settings"] = JSON.stringify(settings);
     }
